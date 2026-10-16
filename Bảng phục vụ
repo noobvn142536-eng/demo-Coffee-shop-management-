@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f3;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-primary":"#dfc0b3","on-error-container":"#93000a","on-secondary-fixed":"#321200","surface-bright":"#fcf9f3","on-error":"#ffffff","on-tertiary-container":"#6c8d74","on-primary-fixed-variant":"#584238","secondary-container":"#fc934f","on-tertiary-fixed-variant":"#2f4d38","secondary":"#994703","on-background":"#1c1c18","tertiary-fixed-dim":"#accfb3","surface-variant":"#e5e2dc","on-surface":"#1c1c18","surface-container-highest":"#e5e2dc","surface-container":"#f0eee8","surface-container-low":"#f6f3ed","error":"#ba1a1a","inverse-surface":"#31312d","background":"#fcf9f3","on-primary":"#ffffff","surface":"#fcf9f3","surface-tint":"#71594f","tertiary":"#000502","inverse-on-surface":"#f3f0ea","on-secondary-fixed-variant":"#753400","tertiary-container":"#042311","on-tertiary-fixed":"#02210f","outline":"#81746f","tertiary-fixed":"#c8ebce","primary-container":"#2b1a12","surface-dim":"#dcdad4","secondary-fixed":"#ffdbc9","on-secondary":"#ffffff","on-secondary-container":"#6d3000","on-tertiary":"#ffffff","secondary-fixed-dim":"#ffb68c","outline-variant":"#d3c3bd","on-primary-fixed":"#281810","surface-container-lowest":"#ffffff","primary-fixed-dim":"#dfc0b3","on-primary-container":"#9b8075","primary-fixed":"#fcdcce","error-container":"#ffdad6","on-surface-variant":"#4f4540","surface-container-high":"#ebe8e2","primary":"#0c0301"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{margin:"1rem","space-md":"0.75rem","space-xs":"0.25rem",gutter:"0.75rem","space-lg":"1rem","space-sm":"0.5rem","space-xl":"1.5rem"},fontFamily:{"body-lg":["Plus Jakarta Sans"],"currency-display":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"title-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"]},fontSize:{"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"currency-display":["28px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"title-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><button aria-label="Mở danh mục" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="flex items-center gap-2"><img alt="Kaffe POS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WFeofKxTT6NvZbJhTge1Da4cCkQ7L_-r6h3wjnYwAXL3Paj5Cbzxy1fwmIXcNS9APXkhv7becXmwnJXNt5G6R8bQ4gdOighCpB-dfPRz3J76SxbMEQ3Zl6Lov6EnLeY3ac1uZtdJXbOsqWGEXUybLGGiRc8xm2YCT2e1-M7ZMmJMMm2zqawAnAalZkh32KInkNrTKKldo4-x4WdyvsWY_uwTrl_wWi_huHc9EuOT5oSv8AAGUM7txvQg"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-title-sm text-title-sm text-primary leading-none">Käffe POS</span><span class="hidden xs:inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-title-sm text-title-sm text-on-surface-variant leading-none hidden xs:inline">Bàn Ăn</span></div><span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate max-w-[130px] sm:max-w-none">Ca sáng • Thảo Vy</span></div></div></div><div class="flex items-center gap-space-sm"><button aria-label="Giỏ hàng thanh toán" class="relative w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 bg-secondary text-on-secondary rounded-full font-label-sm text-label-sm flex items-center justify-center shadow-sm">3</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full relative">
+<!-- Top Operational Control Rail -->
+<section class="px-margin pt-space-sm pb-space-xs flex flex-col gap-space-sm">
+<!-- Zone Switcher Carousel -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm whitespace-nowrap active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span>Tất cả khu vực</span>
+<span class="ml-1 px-1.5 py-0.2 rounded-full bg-surface-container-lowest/20 text-on-primary text-[10px] font-bold">18</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">deck</span>
+<span>Tầng 1 (Trong nhà)</span>
+<span class="ml-1 px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px]">6</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">balcony</span>
+<span>Tầng 2 (Ban công)</span>
+<span class="ml-1 px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px]">7</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">yard</span>
+<span>Sân vườn</span>
+<span class="ml-1 px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px]">5</span>
+</button>
+</div>
+<!-- Multi-Action Bar: Status Pills & Rapid Floor Ops -->
+<div class="flex flex-col gap-2">
+<!-- Status Badges Strip -->
+<div class="grid grid-cols-4 gap-1.5 p-1 rounded-xl bg-surface-container-low shadow-sm">
+<button class="flex items-center justify-center gap-1 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Tất cả</span>
+<span class="font-bold ml-0.5">18</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-1.5 rounded-lg text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:bg-surface-container-lowest/60 transition-colors">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Trống</span>
+<span class="font-bold ml-0.5 text-on-surface">8</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-1.5 rounded-lg text-on-secondary-fixed-variant font-label-sm text-label-sm hover:bg-surface-container-lowest/60 transition-colors">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Có khách</span>
+<span class="font-bold ml-0.5 text-on-surface">7</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-1.5 rounded-lg text-on-error-container font-label-sm text-label-sm hover:bg-surface-container-lowest/60 transition-colors">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Đặt trước</span>
+<span class="font-bold ml-0.5 text-on-surface">3</span>
+</button>
+</div>
+<!-- Quick Operational Action Buttons -->
+<div class="flex items-center justify-between gap-2">
+<button class="flex-1 h-9 px-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center gap-1 text-on-surface hover:bg-surface-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[17px] text-secondary">add_circle</span>
+<span class="font-label-md text-label-md">Mở bàn mới</span>
+</button>
+<button class="flex-1 h-9 px-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center gap-1 text-on-surface hover:bg-surface-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[17px] text-on-surface-variant">move_up</span>
+<span class="font-label-md text-label-md">Chuyển bàn</span>
+</button>
+<button class="flex-1 h-9 px-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center gap-1 text-on-surface hover:bg-surface-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[17px] text-on-surface-variant">call_merge</span>
+<span class="font-label-md text-label-md">Gộp bàn</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Visual Floor Legend -->
+<section class="px-margin py-2 flex items-center justify-between overflow-x-auto no-scrollbar text-on-surface-variant font-label-sm text-label-sm gap-3">
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Bàn trống</span>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span>Đang phục vụ</span>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span>Đặt trước</span>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<span>Chờ dọn dẹp</span>
+</div>
+</section>
+<!-- Table Management Grid -->
+<section class="px-margin pt-1 pb-28">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm" id="table-grid">
+<!-- Table 1: T1.01 (OCCUPIED - CURRENTLY SELECTED) -->
+<div class="relative flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-md ring-2 ring-primary cursor-pointer active:scale-98 transition-all" onclick="selectFloorTable('T1.01')">
+<!-- Top Row: ID, People, Timer -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-title-md text-title-md text-primary">T1.01</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span>4
+          </span>
+</div>
+<!-- Middle Info: Time & Items count -->
+<div class="my-2 flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span>
+<span>45 phút</span>
+<span class="text-surface-variant">•</span>
+<span>3 món</span>
+</div>
+<div class="font-title-md text-title-md text-secondary font-bold tracking-tight">145.000đ</div>
+</div>
+<!-- Selection Marker Footer -->
+<div class="pt-1.5 flex items-center justify-between text-primary font-label-sm text-label-sm">
+<span class="flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Đang chọn
+          </span>
+<span class="material-symbols-outlined text-[16px] text-primary">touch_app</span>
+</div>
+</div>
+<!-- Table 2: T1.02 (AVAILABLE) -->
+<div class="relative flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition-all" onclick="selectFloorTable('T1.02')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-title-md text-title-md text-on-surface">T1.02</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span>2
+          </span>
+</div>
+<div class="my-2 py-1 flex items-center gap-1.5 text-on-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">table_bar</span>
+<span>Bàn trống sẵn sàng</span>
+</div>
+<button class="w-full h-8 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[15px]">person_add</span>
+<span>Mở bàn</span>
+</button>
+</div>
+<!-- Table 3: T1.03 (OCCUPIED) -->
+<div class="relative flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition-all" onclick="selectFloorTable('T1.03')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-title-md text-title-md text-on-surface">T1.03</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span>2
+          </span>
+</div>
+<div class="my-2 flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span>
+<span>20 phút</span>
+<span class="text-surface-variant">•</span>
+<span>2 món</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold">95.000đ</div>
+</div>
+<div class="pt-1 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Phục vụ món đủ</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">receipt</span>
+</div>
+</div>
+<!-- Table 4: T1.04 (RESERVED) -->
+<div class="relative flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition-all" onclick="selectFloorTable('T1.04')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-title-md text-title-md text-on-surface">T1.04</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">groups</span>6
+          </span>
+</div>
+<div class="my-2 flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-error font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">event_seat</span>
+<span>Hẹn 18:30</span>
+</div>
+<div class="text-on-surface font-title-sm text-title-sm truncate">A. Tuấn</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">0988.241.xxx</div>
+</div>
+<div class="pt-1 flex items-center justify-between text-on-error-container font-label-sm text-label-sm">
+<span>Đã xác nhận cọc</span>
+<span class="material-symbols-outlined text-[15px]">call</span>
+</div>
+</div>
+<!-- Table 5: T1.05 (AVAILABLE) -->
+<div class="relative flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition-all" onclick="selectFloorTable('T1.05')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-title-md text-title-md text-on-surface">T1.05</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span>4
+          </span>
+</div>
+<div class="my-2 py-1 flex items-center gap-1.5 text-on-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">table_restaurant</span>
+<span>Bàn trống sẵn sàng</span>
+</div>
+<button class="w-full h-8 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[15px]">person_add</span>
+<span>Mở bàn</span>
+</button>
+</div>
+<!-- Table 6: T1.06 (OCCUPIED) -->
+<div class="relative flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition-all" onclick="selectFloorTable('T1.06')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-title-md text-title-md text-on-surface">T1.06</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span>3
+          </span>
+</div>
+<div class="my-2 flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span>
+<span>1h 10m</span>
+<span class="text-surface-variant">•</span>
+<span>5 món</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold">280.000đ</div>
+</div>
+<div class="pt-1 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Yêu cầu thanh toán</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">notifications_active</span>
+</div>
+</div>
+<!-- Table 7: T2.01 (CLEANING / INVOICING) -->
+<div class="relative flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition-all" onclick="selectFloorTable('T2.01')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<span class="font-title-md text-title-md text-on-surface-variant">T2.01</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span>2
+          </span>
+</div>
+<div class="my-2 flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">cleaning_services</span>
+<span>Chờ dọn dẹp</span>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">Khách vừa rời 3p</div>
+</div>
+<button class="w-full h-8 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[15px]">done_all</span>
+<span>Đã dọn xong</span>
+</button>
+</div>
+<!-- Table 8: T2.02 (OCCUPIED) -->
+<div class="relative flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition-all" onclick="selectFloorTable('T2.02')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-title-md text-title-md text-on-surface">T2.02</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span>2
+          </span>
+</div>
+<div class="my-2 flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span>
+<span>15m</span>
+<span class="text-surface-variant">•</span>
+<span>2 món</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold">80.000đ</div>
+</div>
+<div class="pt-1 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Tầng 2 Ban công</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">local_bar</span>
+</div>
+</div>
+<!-- Table 9: SV.01 (GARDEN - AVAILABLE) -->
+<div class="relative flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition-all" onclick="selectFloorTable('SV.01')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-title-md text-title-md text-on-surface">SV.01</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span>4
+          </span>
+</div>
+<div class="my-2 py-1 flex items-center gap-1.5 text-on-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">park</span>
+<span>Khu vườn thoáng</span>
+</div>
+<button class="w-full h-8 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[15px]">person_add</span>
+<span>Mở bàn</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Sticky Dynamic Docked Cart & Bill Panel (Bottom Sheet Ergonomics) -->
+<aside class="fixed bottom-16 inset-x-0 z-40 bg-surface-container-lowest rounded-t-3xl shadow-[0_-8px_30px_rgba(43,26,18,0.12)] transition-transform duration-300 max-h-[724px] flex flex-col" id="order-drawer">
+<!-- Sheet Drag Handle & Collapsed Bar -->
+<div class="px-margin pt-3 pb-2 flex flex-col items-center cursor-pointer select-none" onclick="toggleDrawer()">
+<div class="w-10 h-1.5 rounded-full bg-surface-variant mb-2"></div>
+<!-- Collapsed Peek Line -->
+<div class="w-full flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">local_cafe</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-primary">Bàn T1.01</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-medium">4 khách</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 món • Tầng 1 Trong nhà</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tổng cộng</div>
+<div class="font-currency-display text-[20px] leading-tight text-secondary font-bold">142.100đ</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface transition-transform duration-200" id="drawer-toggle-icon">
+<span class="material-symbols-outlined text-[20px]">expand_less</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Expandable Detailed Bill Content -->
+<div class="overflow-y-auto px-margin pb-4 flex flex-col gap-3" id="drawer-expanded-content">
+<!-- Quick Modifier Action Strip -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-title-sm text-title-sm text-primary">Món đã phục vụ</span>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low text-secondary font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[15px]">edit_note</span>
+<span>Ghi chú bếp</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm flex items-center gap-1 hover:bg-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>Thêm món</span>
+</button>
+</div>
+</div>
+<!-- Line Items List -->
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0" data-alt="Signature Vietnamese sea salt iced coffee with whipped salted cream froth on top, served in clear glassware with ice cubes on a warm wooden cafe table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGNSPbD7-8bHoCjA--WB5Tfe69pnJI6JNfybzvRkPUZdRDvi6AyZzdZ_p-5JyhrBbrenqAk3beWaAg4xpcBbGLhsXMEYyJ2k2WKwLUN3PF4lnA2GxaQIbi880dl8101jOwkZw04GxrNmnYid0VB9gRP-2ozaljPcWa2z5dLBQuhMvvWSa76Xh6smWjBKFi_dqQ13o9qpyMYuD2jewhE53tiyaHguCvorNwRQKvtTF4wExnbRj1tfrX"/>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Cà phê Muối Käffe</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1x • Ít ngọt, 50% đá</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container mt-0.5">Đã lên bàn</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">45.000đ</span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="w-6 h-6 rounded bg-surface-container-lowest flex items-center justify-center text-xs active:scale-90">-</button>
+<span class="font-label-sm text-label-sm px-1 font-semibold text-on-surface">1</span>
+<button class="w-6 h-6 rounded bg-surface-container-lowest flex items-center justify-center text-xs active:scale-90">+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0" data-alt="Vibrant iced peach orange lemongrass fruit tea with fresh peach slices, orange wheel, and fragrant herbs in a Nordic aesthetic glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKeOSSmKtxEn6fPfwgJ9Jw0OlZaX6iUHUTwP6Ilt3vDnHO32XL7qqjUR3yt3Zqih3DyD1oALFUP0cLRLbe0DMTTOlu5VDFT3_LaSHPKcKzjtjJzMJrmoCifWH5Y_YGOeSNI8OhbverV-LfwuVgjhtpYM-ak0CeOsKuKQu5zZIrq-yXECMqVyyO1LT537XOsmTsKuOK44R7y8e4iAMwIF8r8Qla9hdt2l9s_KXQcoHR3YG0oZNGhZlU"/>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Trà Đào Cam Sả</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1x • Nhiều đào, 70% đá</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container mt-0.5">Đã lên bàn</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">50.000đ</span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="w-6 h-6 rounded bg-surface-container-lowest flex items-center justify-center text-xs active:scale-90">-</button>
+<span class="font-label-sm text-label-sm px-1 font-semibold text-on-surface">1</span>
+<button class="w-6 h-6 rounded bg-surface-container-lowest flex items-center justify-center text-xs active:scale-90">+</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0" data-alt="Iced specialty Bac Xiu with layered oat milk and delicate dark espresso float in a minimalist ribbed glass beaker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ8iWKcUpl4p8Boj8FIMFKV5I2eO1S7UFvT4QMKSK1xWO935r0-OocpT2lNmTPw56JwQv_pBbB7k8I8MAiiK8mmFBSr-RPgPBobvJaDl7e2tQG_eiid769_z49paexsJDahpdwcfTg-K7Q6xbf1J0GrdnnD9xGYLBaMXIpezmh_MyK9JxWtptxh-2jqlIb7H_xNgAHpTPmWmw5pjXfDM7uwqaFygEMOXk0RWX2tX0fnaengnRctICK"/>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Bạc Xỉu Yến Mạch</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1x • Sữa hạt Oatly, ít đá</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container mt-0.5">Đã lên bàn</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">50.000đ</span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="w-6 h-6 rounded bg-surface-container-lowest flex items-center justify-center text-xs active:scale-90">-</button>
+<span class="font-label-sm text-label-sm px-1 font-semibold text-on-surface">1</span>
+<button class="w-6 h-6 rounded bg-surface-container-lowest flex items-center justify-center text-xs active:scale-90">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Financial Calculation Summary Card -->
+<div class="p-3 rounded-2xl bg-surface-container flex flex-col gap-1.5">
+<div class="flex justify-between items-center text-on-surface-variant font-body-md text-body-md">
+<span>Tạm tính (3 món)</span>
+<span class="text-on-surface font-medium">145.000đ</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-body-md text-body-md">
+<span>Thuế VAT (8%)</span>
+<span class="text-on-surface font-medium">+11.600đ</span>
+</div>
+<div class="flex justify-between items-center text-secondary font-body-md text-body-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+            Hội viên Vàng (-10%)
+          </span>
+<span class="font-semibold">-14.500đ</span>
+</div>
+<div class="h-px bg-outline-variant my-1"></div>
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">Cần thanh toán</span>
+<span class="font-currency-display text-currency-display text-secondary">142.100đ</span>
+</div>
+</div>
+<!-- Payment Method Quick Trigger Grid -->
+<div class="grid grid-cols-3 gap-2">
+<button class="h-11 rounded-xl bg-surface-container-low flex items-center justify-center gap-1.5 text-primary hover:bg-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px] text-secondary">qr_code_scanner</span>
+<span class="font-label-md text-label-md">VietQR</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low flex items-center justify-center gap-1.5 text-primary hover:bg-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span class="font-label-md text-label-md">Tiền mặt</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low flex items-center justify-center gap-1.5 text-primary hover:bg-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">contactless</span>
+<span class="font-label-md text-label-md">Thẻ POS</span>
+</button>
+</div>
+<!-- Main High-Contrast Checkout Button -->
+<button class="w-full h-13 py-3.5 rounded-xl bg-primary text-on-primary font-title-md text-title-md font-semibold flex items-center justify-center gap-2 shadow-lg active:scale-98 transition-transform" onclick="handleCheckoutModal()">
+<span class="material-symbols-outlined text-[22px]">point_of_sale</span>
+<span>Thanh toán &amp; In hoá đơn</span>
+</button>
+</div>
+</aside>
+<!-- Interactive Modal: Payment Complete Delight Notification -->
+<div class="hidden fixed inset-0 z-50 bg-primary-container/60 backdrop-blur-sm flex items-center justify-center p-margin" id="payment-modal">
+<div class="w-full max-w-sm rounded-2xl bg-surface-container-lowest p-5 flex flex-col items-center text-center shadow-2xl animate-in fade-in duration-200">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-3">
+<span class="material-symbols-outlined text-[32px]">check_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Thanh toán hoàn tất!</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Bàn T1.01 • Hoá đơn #KAF-9824 đã chuyển vào danh sách chờ dọn dẹp.</p>
+<div class="w-full my-4 p-3 rounded-xl bg-surface-container-low text-left font-body-md text-body-md">
+<div class="flex justify-between py-0.5">
+<span class="text-on-surface-variant">Phương thức:</span>
+<span class="font-semibold text-on-surface">VietQR Chuyển khoản</span>
+</div>
+<div class="flex justify-between py-0.5">
+<span class="text-on-surface-variant">Tổng thu:</span>
+<span class="font-bold text-secondary">142.100đ</span>
+</div>
+</div>
+<div class="w-full flex gap-2">
+<button class="flex-1 h-11 rounded-xl bg-surface-container text-on-surface font-title-sm text-title-sm hover:bg-surface-variant transition-colors" onclick="closeModal()">
+          Đóng
+        </button>
+<button class="flex-1 h-11 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-1" onclick="closeModal()">
+<span class="material-symbols-outlined text-[18px]">print</span>
+          In lại bill
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let isDrawerOpen = true;
+
+  function toggleDrawer() {
+    const drawer = document.getElementById('order-drawer');
+    const content = document.getElementById('drawer-expanded-content');
+    const icon = document.getElementById('drawer-toggle-icon');
+
+    if (isDrawerOpen) {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(180deg)';
+      isDrawerOpen = false;
+    } else {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(0deg)';
+      isDrawerOpen = true;
+    }
+  }
+
+  function selectFloorTable(tableId) {
+    const cards = document.querySelectorAll('#table-grid > div');
+    cards.forEach(card => {
+      card.classList.remove('ring-2', 'ring-primary', 'shadow-md');
+      card.classList.add('shadow-sm');
+    });
+
+    const target = event.currentTarget;
+    target.classList.add('ring-2', 'ring-primary', 'shadow-md');
+    target.classList.remove('shadow-sm');
+
+    // Auto open drawer if closed
+    if (!isDrawerOpen) {
+      toggleDrawer();
+    }
+  }
+
+  function handleCheckoutModal() {
+    const modal = document.getElementById('payment-modal');
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('payment-modal');
+    modal.classList.add('hidden');
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_20px_-2px_rgba(43,26,18,0.08)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-gutter"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="ban-an" href="#"><span class="material-symbols-outlined text-[24px]">table_restaurant</span><span class="font-label-sm text-label-sm mt-0.5">Bàn ăn</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="thuc-don" href="#"><span class="material-symbols-outlined text-[24px]">local_cafe</span><span class="font-label-sm text-label-sm mt-0.5">Thực đơn</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="don-hang" href="#"><span class="material-symbols-outlined text-[24px]">order_approve</span><span class="font-label-sm text-label-sm mt-0.5">Đơn hàng</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="doanh-thu" href="#"><span class="material-symbols-outlined text-[24px]">insights</span><span class="font-label-sm text-label-sm mt-0.5">Doanh thu</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="cai-dat" href="#"><span class="material-symbols-outlined text-[24px]">settings</span><span class="font-label-sm text-label-sm mt-0.5">Cài đặt</span></a></div></nav></body></html>
